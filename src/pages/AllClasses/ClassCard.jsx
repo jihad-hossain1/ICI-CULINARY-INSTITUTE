@@ -12,7 +12,7 @@ const ClassCard = ({ item }) => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const { _id, image, classPrice, name, seats, instructorName } = item;
+  const { _id, image, price, name, seats, instructorName } = item;
 
   const handleEnroll = (item) => {
     // console.log(item);
@@ -22,12 +22,12 @@ const ClassCard = ({ item }) => {
         menuItemId: _id,
         name,
         image,
-        classPrice,
+        price,
         seats,
         email: user.email,
         instructorName,
       };
-      fetch(`${import.meta.env.VITE_BASE_URL}/student`, {
+      fetch(`${import.meta.env.VITE_BASE_URL}/carts`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -78,7 +78,7 @@ const ClassCard = ({ item }) => {
       >
         <div className="py-2">
           <h4 className="text-lg font-semibold">Class Name: {item?.name}</h4>
-          <p className="text-md">Class Price: ${classPrice}</p>
+          <p className="text-md">Class Price: ${price}</p>
           <p className="text-md">Seats: {item?.seats}</p>
         </div>
         <Meta

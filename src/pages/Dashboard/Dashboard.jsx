@@ -2,9 +2,9 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import Container from "../../components/container/Container";
 import useAdmin from "../../hook/useAdmin";
-import useAuth from "../../hook/useAuth";
+// import useAuth from "../../hook/useAuth";
 import useInstructor from "../../hook/useInstructor";
-import useNormalUser from "../../hook/useNormalUser";
+// import useNormalUser from "../../hook/useNormalUser";
 import { ImUser } from "react-icons/im";
 import { HiAcademicCap, HiOutlineArrowSmRight } from "react-icons/hi";
 import {
@@ -20,6 +20,7 @@ import {
 const Dashboard = () => {
   // const { user } = useAuth();
   const [isAdmin, isAdminLoading] = useAdmin();
+  
   const isInstructor = useInstructor();
   // const user = false;
   // const isNormalUser = useNormalUser();

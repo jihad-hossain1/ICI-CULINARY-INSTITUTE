@@ -9,7 +9,7 @@ const ClassDetails = () => {
     image,
     campus,
     category,
-    classPrice,
+    price,
     details,
     duration,
     instructorName,
