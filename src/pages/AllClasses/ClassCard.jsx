@@ -73,9 +73,13 @@ const ClassCard = ({ item }) => {
         <div className="divider"></div>
         <div>
           <h4 className="text-center font-extralight">Instructor Info.</h4>
-          <img src={userAvt} className="rounded-full w-10" alt="" />
-          <h4 className="font-semibold">{item?.instructorName}</h4>
-          <p className="text-neutral-700">{item?.email}</p>
+          <div className="flex items-center space-x-2">
+            <img src={userAvt} className="rounded-full w-10" alt="" />
+            <div>
+              <h4 className="font-semibold">{item?.instructorName}</h4>
+              <p className="text-neutral-700">{item?.email}</p>
+            </div>
+          </div>
         </div>
         <div className="divider"></div>
         <div className="text-center mt-3 flex justify-between items-center px-6">
