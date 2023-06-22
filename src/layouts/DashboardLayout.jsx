@@ -45,6 +45,14 @@ const DashboardLayout = () => {
                     </Link>
                   </li>
                   <li className="hover:text-green-600">
+                    <Link to={`myClass`} className="flex items-center">
+                      <span>
+                        <HiOutlineArrowSmRight className="text-2xl mr-2"></HiOutlineArrowSmRight>
+                      </span>
+                      Manage Ins.Class
+                    </Link>
+                  </li>
+                  <li className="hover:text-green-600">
                     <Link to={`addInstructor`} className="flex items-center">
                       <span>
                         <HiAcademicCap className="text-2xl mr-2"></HiAcademicCap>
@@ -126,6 +134,14 @@ const DashboardLayout = () => {
                         <HiOutlineArrowSmRight className="text-2xl mr-2"></HiOutlineArrowSmRight>
                       </span>
                       Add Class
+                    </Link>
+                  </li>
+                  <li className="hover:text-green-600">
+                    <Link to={`myClass`} className="flex items-center">
+                      <span>
+                        <HiOutlineArrowSmRight className="text-2xl mr-2"></HiOutlineArrowSmRight>
+                      </span>
+                      Manage Ins.Class
                     </Link>
                   </li>
                   <li className="hover:text-green-600">

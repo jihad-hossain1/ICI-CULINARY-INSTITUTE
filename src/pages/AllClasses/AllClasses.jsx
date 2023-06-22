@@ -31,7 +31,7 @@ const AllClasses = () => {
       </div>
       <div>
         <h4>Total Classes: {classes.length}</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 p-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5 py-16">
           {classes.map((item) => (
             <ClassCard key={item._id} item={item}></ClassCard>
           ))}

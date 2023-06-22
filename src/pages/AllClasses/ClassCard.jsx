@@ -62,33 +62,36 @@ const ClassCard = ({ item }) => {
     }
   };
   return (
-    <div>
-      <Card
-        className="shadow-md hover:shadow-lg"
-        style={{
-          width: 400,
-        }}
-        cover={<img alt="class" src={image} />}
-        actions={[
-          <button onClick={() => handleEnroll(item)}>Enroll Now</button>,
-          <button>
-            <Link to={`/allclasses/${_id}`}>Show Details</Link>
-          </button>,
-        ]}
-      >
-        <div className="py-2">
+    <>
+      <div className="border rounded-lg p-3 inline-block">
+        <img src={image} className="object-cover rounded-lg" alt="" />
+        <div className="mt-3 space-y-2">
           <h4 className="text-lg font-semibold">Class Name: {item?.name}</h4>
           <p className="text-md">Class Price: ${price}</p>
           <p className="text-md">Seats: {item?.seats}</p>
         </div>
-        <Meta
-          className="border rounded-md p-2 "
-          avatar={<Avatar src={userAvt} />}
-          title={`${item?.instructorName} ( Instructor )`}
-          description={`Email: ${item?.email}`}
-        />
-      </Card>
-    </div>
+        <div className="divider"></div>
+        <div>
+          <h4 className="text-center font-extralight">Instructor Info.</h4>
+          <img src={userAvt} className="rounded-full w-10" alt="" />
+          <h4 className="font-semibold">{item?.instructorName}</h4>
+          <p className="text-neutral-700">{item?.email}</p>
+        </div>
+        <div className="divider"></div>
+        <div className="text-center mt-3 flex justify-between items-center px-6">
+          <button
+            onClick={() => handleEnroll(item)}
+            className="hover:text-green-700 hover:font-semibold border border-slate-300 hover:border-green-300 rounded-md py-1 px-2"
+          >
+            Enroll Now
+          </button>
+
+          <button className="hover:text-green-700 hover:font-semibold border border-slate-300 hover:border-green-300  rounded-md py-1 px-2">
+            <Link to={`/allclasses/${_id}`}>Show Details</Link>
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 

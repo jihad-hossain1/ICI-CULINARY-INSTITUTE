@@ -62,7 +62,7 @@ To run tests, run the following command
     
 ## live Preview
 
-- [Preview here](https://ici-culinary.web.app/)
+- [Preview here](https://ici-culinary-institute.web.app)
 
 ## 🚀 About Me
 I'm a junior MERN stack web developer at learnig stage...
